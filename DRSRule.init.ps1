@@ -1,4 +1,5 @@
-﻿$pcliDll = "${env:\ProgramFiles(x86)}\VMware\Infrastructure\vSphere PowerCLI\VMware.Vim.dll"
+﻿$modulePath = (get-module VMware.VimAutomation.Core).path
+﻿$pcliDll = "$($modulePath.substring(0,$modulePath.indexOf('Modules')))VMware.Vim.dll"
 
 Add-Type -ReferencedAssemblies $pcliDll -TypeDefinition @"
   using VMware.Vim;
