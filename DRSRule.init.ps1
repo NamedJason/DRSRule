@@ -1,5 +1,5 @@
-﻿$modulePath = (get-module VMware.VimAutomation.Core).path
-﻿$pcliDll = "$($modulePath.substring(0,$modulePath.indexOf('Modules')))VMware.Vim.dll"
+#Requires -Modules VMware.VimAutomation.Core, @{ModuleName="VMware.VimAutomation.Core";ModuleVersion="6.0.0.0"}
+$pcliDLL = join-path -path (get-installpath) -childpath "VMware.Vim.dll"
 
 Add-Type -ReferencedAssemblies $pcliDll -TypeDefinition @"
   using VMware.Vim;
