@@ -10,9 +10,16 @@ A couple of examples:
 - Import rule/group info:  `Import-DrsRule -Path c:\someFolder\myDrsRuleAndGroupInfo.json`
 
 ### How to set up the DRSRule module for use ###
+Method 1
 * Download and extract the module .zip file
 * `Unblock-File` on the extracted contents
 * `Import-Module <path\To\ModuleFolder>`
+* Use `Get-Help` as per usual for cmdlet help and examples
+
+Method 2
+* Download the module .zip and run `Unblock-File` on it
+* Extract the .zip file into `%userprofile%\Documents\WindowsPowerShell\Modules\DRSRule`
+* `Import-Module DRSRule`
 * Use `Get-Help` as per usual for cmdlet help and examples
 
 ### Cmdlets in this module ###
